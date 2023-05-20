@@ -22,7 +22,7 @@ for (;;) {
      $fileWriteIn = fopen("JOBS_IN", "w");
      fwrite($fileWriteIn,explode($data_in, $contents)[0].explode($data_in, $contents)[1]);
      $fileWriteOut = fopen("JOBS_OUT", "w");
-     fwrite($fileWriteOut,explode($random_hash.":".$data, $response)[0].explode($random_hash.":".$data, $contents)[1]);
+     fwrite($fileWriteOut,explode($random_hash.":".$data, $contents)[0].explode($random_hash.":".$data, $contents)[1]);
      //it finished, echo output :)
      echo(base64_decode($data));
      break;
