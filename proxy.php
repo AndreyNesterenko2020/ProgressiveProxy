@@ -20,7 +20,7 @@ for (;;) {
    if(strpos($contents, $random_hash) !== false) {
      $data = trim(explode(",", explode($random_hash, $contents)[1])[0], ":");
      $fileWriteIn = fopen("JOBS_IN", "w");
-     fwrite($fileWrite,explode($data_in, $contents)[0].explode($data_in, $contents)[1]);
+     fwrite($fileWriteIn,explode($data_in, $contents)[0].explode($data_in, $contents)[1]);
      $fileWriteOut = fopen("JOBS_OUT", "w");
      fwrite($fileWriteOut,explode($random_hash.":".$data, $response)[0].explode($random_hash.":".$data, $response)[1]);
      //it finished, echo output :)
